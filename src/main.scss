@@ -1,0 +1,134 @@
+// Styles only for the FORM...
+
+.social-groups-form {
+  width: 100%;
+  padding: 1em;
+  // background-color: slategray;
+  background-color: #fbfbfb;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.form-group__section {
+  margin-bottom: 1rem;
+}
+
+.form-group--personal {
+  // background-color: cornflowerblue;
+}
+
+.group-two,
+.group-three {
+  display: none;
+}
+
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+
+.form-group > div {
+  // width: 100%;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  //flex: 1;
+  flex: 1 1 0;
+  //min-width: 0;
+  margin-bottom: 1.3rem;
+}
+
+
+input {
+  height: 2.333rem;
+  border-radius: .3rem;
+  border: 1px solid #e8e8e8;
+  padding-left: .5rem;
+}
+input:focus {
+  outline: none; /* Remueve el estilo por defecto */
+  border: 2px solid #1b539d; /* Aplica un borde personalizado */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Opcional: agrega una sombra para realzar el foco */
+}
+
+label {
+  color: #2c2c2c;
+  font-size: .89rem;
+  font-weight: 600;
+  margin-bottom: .3rem;
+  padding-left: .2em;
+}
+
+// ---------- Arrows ---------- //
+
+.arrows {
+  display: flex;
+  gap: .15rem;
+  margin-left: auto;
+  justify-content: flex-end;
+  //background-color: violet;
+  width: 55%;
+}
+
+.nav-group {
+  font-size: clamp(.8rem, 4vw, .93rem);
+  padding: .65em 0;
+  background-color: transparent;
+  //border: 1px solid black;
+  //border-radius: .3rem;
+  border: none;
+}
+
+.nav-left {
+  width: 50%;
+  //color: red;
+}
+.nav-right {
+  width: 50%;
+  color: white;
+  background-color: #cc2126;
+}
+
+
+
+
+
+
+
+// Button Group
+
+.stv-radio-buttons-wrapper {
+  clear: both;
+  display: inline-block;
+}
+
+.stv-radio-button {
+  position: absolute;
+  left: -9999em;
+  top: -9999em;
+
+  & + label {
+    float: left;
+    padding: .8em 1em;
+    cursor: pointer;
+    border: 1px solid #28608f;
+    margin-right: -1px;
+    color: #fff;
+    background-color: #428bca;
+
+    &:first-of-type {
+      //border-radius: .7em 0 0 .7em;
+    }
+
+    &:last-of-type {
+      //border-radius: 0 .7em .7em 0;
+    }
+  }
+
+  &:checked + label {
+    background-color: #3277b3;
+  }
+}

@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vite App</title>
+
+    <link rel="stylesheet" href="src/nice-select2.css" />
+</head>
+<body>
+<!--    <div id="app"></div>-->
+
+<main id="social-groups-main" class="social-groups">
+    <div class="navbar"></div>
+
+
+    <div id="offCanvasContainer" class="off-canvas-container">
+
+        <div class="off-canvas__controls">
+            <button type="button" id="offCanvasCloseButton" class="off-canvas-close-button" style="font-size: 1.3rem;">X</button>
+        </div>
+
+        <div class="off-canvas__content">
+            <!-- [ EXTERNAL FORM (mobile) :: Start ] -->
+            <div class="sticky-form__container">
+
+                <div class="sticky-form__heading">
+                    <!--                        <p class="h3 text-center">Special Offers for Social Groups</p>-->
+                </div>
+
+                <div id="sg-master-form-mobile" class="social-groups__form">
+                    <!-- Formulario HubSpot -->
+                    <div
+                            class="hs-form-frame"
+                            data-region="na1"
+                            data-form-id="0d551bf4-1040-4f4c-9e0d-cd28c4479e88"
+                            data-portal-id="45061181"
+                    ></div>
+                </div>
+
+                <footer class="sticky-form__footer">
+                    <hr class="soft-separator">
+                    <p class="text-center footer__title" style="margin-bottom: 1rem;">Talk to our Travel Specialist</p>
+                    <p class="text-center footer__contact-info" style="color:#000;">
+                        <svg class="tafer-rewards__card-logo svg-primary position-absolute top-0 start-50 translate-middle-x mt-4" width="18" height="18"
+                             fill="currentColor" style="stroke-width: 0;">
+                            <use xlink:href="/icons.svg#call"></use>
+                        </svg>
+                        Toll Free USA/CAN<a data-seo-button="Call to Call center" href="tel:18009314614">1 800 931 4614</a>
+                    </p>
+
+                    <p class="text-center footer__terms" style="margin: 0 !important;">
+                        <small>
+                            Reserve 7 rooms, and we’ll include 1 complimentary suite to elevate your stay. Come together and Celebrate in style. Let us handle the
+                            rest.
+                        </small>
+                    </p>
+                </footer>
+
+            </div>
+            <!-- [ EXTERNAL FORM (mobile) :: End ] -->
+        </div>
+    </div>
+
+    <section class="hero hero--mobile">
+        <picture class="hero__picture">
+            <source
+                    srcset="/images/social-groups-demo-hero-lg.webp"
+                    media="(min-width: 768px)"
+            >
+            <img
+                    src="/images/social-groups-demo-hero-sm.webp"
+                    alt="Social Groups Garza Blanca"
+                    class="hero__image"
+            >
+        </picture>
+
+<!--        <div class="insignia__container">-->
+<!--            <img src="/lib/dist/img/come-together-insignia-black.svg" alt="">-->
+<!--        </div>-->
+
+        <div class="hero-description primary-paragraph">
+            <p>Celebrate life’s special moments at Garza Blanca Resort & Spa Cancun.
+                Let us make your celebration unforgettable.
+            </p>
+        </div>
+
+        <div class="chevron-down"></div>
+    </section>
+
+    <div class="x-container">
+        <div class="social-groups__template-grid">
+
+            <div class="main-container">
+
+                <section class="hero hero--desktop">
+                    <picture class="hero__picture">
+                        <source
+                                srcset="/images/social-groups-demo-hero-lg.webp"
+                                media="(min-width: 768px)"
+                        >
+                        <img
+                                src="/images/social-groups-demo-hero-sm.webp"
+                                alt="Social Groups Garza Blanca"
+                                class="hero__image"
+                        >
+                    </picture>
+
+                    <div class="insignia__container">
+<!--                        <img src="/lib/dist/img/come-together-insignia-black.svg" alt="">-->
+                    </div>
+
+                </section>
+
+
+                <section id="packages" class="packages-section--desktop">
+                    <h2 style="text-align: center; margin-bottom: 4rem;" class="h2-title">Unforgettable Moments: Tailored Group Celebrations</h2>
+
+                    <article class="package-card">
+                        <div class="package-card__thumbnail">
+<!--                            <img-->
+<!--                                    src="<?= htmlspecialchars($package['image_url'], ENT_QUOTES, 'UTF-8'); ?>"-->
+<!--                                    alt="<?= htmlspecialchars($package['package_name'], ENT_QUOTES, 'UTF-8'); ?>"-->
+<!--                            >-->
+                            <img src="https://www.taferresorts.com/cms/resources/bashin-in-style.webp" alt="">
+                        </div>
+                        <div class="package-card__details">
+                            <div class="package-card__heading">
+                                <h4 class="package-card__heading-title">Bashin' in Style</h4>
+                                <p class="package-card__heading-subtitle">
+                                    CELEBRATE YOUR BIRTHDAY IN UNMATCHED STYLE
+                                </p>
+                            </div>
+                            <div class="package-card__content">
+                                <p class="primary-paragraph">
+                                    Elevate your Birthday Bash to the next level! When you arrive, we'll greet you with a special birthday banner at the door and
+                                    surprise you with a gift in your suite. You and your guests can soak up the sun in an exclusive area reserved just for you on the
+                                    beach or rooftop. Indulge in the top culinary experiences at our finest dining restaurants, complete with a custom cake for you
+                                    to blow out the candles and make a wish.
+                                </p>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <hr class="card-separator">
+
+                </section>
+
+
+            </div>
+
+            <div class="aside-container">
+                <div class="sticky-content">
+
+
+                    <div class="sticky-form__container">
+
+                        <form id="socialGroupsForm" action="" class="social-groups-form">
+
+                            <!-- Paso #1 Colocar Select del Tipo de Paquete -->
+
+
+                            <!-- Paso #2 Información Personal -->
+                            <section class="form-group__section form-group--personal" id="one">
+                                <div class="form-group">
+
+                                    <div class="form-control">
+                                        <label for="name">
+                                            First Name
+                                            <span style="color: red">*</span>
+                                        </label>
+                                        <input
+                                                type="text"
+                                                id="name"
+                                                name="name"
+                                                placeholder="Enter your name"
+                                                aria-required="true"
+                                        />
+                                        <span id="name-error" class="error-message" role="alert"></span>
+                                    </div>
+
+                                    <div class="form-control">
+                                        <label for="last-name">
+                                            Last Name
+                                            <span style="color: red">*</span>
+                                        </label>
+                                        <input
+                                                type="text"
+                                                id="last-name"
+                                                name="last-name"
+                                                placeholder="Enter your last name"
+                                                aria-required="true"
+                                        />
+                                        <span id="last-name-error" class="error-message" role="alert"></span>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="form-control">
+                                        <label for="email">
+                                            Email
+                                            <span style="color: red">*</span>
+                                        </label>
+                                        <input
+                                                type="email"
+                                                id="email"
+                                                name="email"
+                                                placeholder="Enter your email"
+                                                aria-required="true"
+                                        />
+                                        <span id="email-error" class="error-message" role="alert"></span>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="form-control">
+                                        <label for="country">Country</label>
+                                        <select
+                                                class="crs-country"
+                                                name="country"
+                                                id="country"
+                                                data-region-id="state"
+                                                data-value="shortcode"
+                                                data-default-option="Select a country"
+                                        >
+                                            <!-- Se rellenará dinámicamente -->
+                                        </select>
+                                    </div>
+
+                                    <div class="form-control">
+                                        <label for="state">State / Province</label>
+                                        <select
+                                                name="state"
+                                                id="state"
+                                                data-blank-option="---"
+                                                data-default-option="Select a region"
+                                        >
+                                            <!-- Se rellenará dinámicamente cuando selecciones un país -->
+                                        </select>
+                                    </div>
+
+                                    <div class="form-control">
+                                        <label for="city">
+                                            City
+                                            <span style="color: red">*</span>
+                                        </label>
+                                        <input
+                                                type="text"
+                                                id="city"
+                                                name="city"
+                                                placeholder="Enter your City"
+                                                aria-required="true"
+                                        />
+                                        <span id="city-error" class="error-message" role="alert"></span>
+                                    </div>
+                                </div>
+
+
+                            </section>
+
+
+                            <!-- Paso #3 Información de Grupo -->
+                            <section class="form-group__section group-two" id="two">
+                                <div class="form-control">
+                                    <label for="arrival-date">
+                                        Arrival date
+                                        <span style="color: red">*</span>
+                                    </label>
+                                    <input
+                                            type="date"
+                                            id="arrival-date"
+                                            name="arrival-date"
+                                            aria-required="true"
+                                    />
+                                    <span id="arrival-date-error" class="error-message" role="alert"></span>
+                                    <span id="error"></span>
+                                </div>
+
+                                <div class="form-control">
+                                    <label for="departure-date">
+                                        Departure date
+                                        <span style="color: red">*</span>
+                                    </label>
+                                    <input
+                                            type="date"
+                                            id="departure-date"
+                                            name="departure-date"
+                                            disabled
+                                            aria-required="true"
+                                    />
+                                    <span id="departure-date-error" class="error-message" role="alert"></span>
+                                </div>
+
+                                <div class="form-control">
+                                    <label for="guests">
+                                        Number of guests
+                                        <span style="color: red">*</span>
+                                    </label>
+                                    <input
+                                            type="number"
+                                            id="guests"
+                                            name="guests"
+                                            placeholder="Enter the number of guests"
+                                            aria-required="true"
+                                    />
+                                    <span id="guests-error" class="error-message" role="alert"></span>
+                                </div>
+
+                                <div class="form-control">
+                                    <p>Group Type</p>
+                                    <div class="stv-radio-buttons-wrapper">
+                                        <input type="radio" class="stv-radio-button" name="radioButtonTest" value="1" id="button1" checked />
+                                        <label for="button1">Family</label>
+
+
+                                        <input type="radio" class="stv-radio-button" name="radioButtonTest" value="2" id="button2" />
+                                        <label for="button2">Social</label>
+
+
+                                        <input type="radio" class="stv-radio-button" name="radioButtonTest" value="2" id="button3" />
+                                        <label for="button3">Business</label>
+
+
+                                        <input type="radio" class="stv-radio-button" name="radioButtonTest" value="3" id="button4" />
+                                        <label for="button4">Retreat</label>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-control">
+                                    <label for="message">Message</label>
+                                    <textarea
+                                            id="message"
+                                            name="message"
+                                            rows="4"
+                                            placeholder="Enter your message"
+                                    ></textarea>
+                                </div>
+
+
+                                <button id="btn" type="submit">Confirm and Submit</button>
+                            </section>
+
+
+
+                            <!-- Controles -->
+                            <div class="arrows">
+                                <button
+                                        class="nav-group nav-left"
+                                        id="navLeft"
+                                        type="button"
+                                        aria-label="Previous step"
+                                >
+<!--                                    <span class="arrow-left">&#8592;</span>-->
+                                    <span>Previous</span>
+                                </button>
+
+                                <span id="stepInfo" role="status" aria-live="polite"></span>
+
+                                <button
+                                        class="nav-group nav-right"
+                                        id="navRight"
+                                        type="button"
+                                        aria-label="Next step"
+                                >
+                                    <span>Next</span>
+<!--                                    <span class="arrow-right">&#8594;</span>-->
+                                </button>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <button id="bookingFormButton" class="booking-form__sticky-button">REQUEST A QUOTE</button>
+
+
+</main>
+
+<script src="src/nice-select2.js"></script>
+
+<script src="crs.min.js"></script>
+
+<script type="module" src="/src/main.js"></script>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<!-- Script de HubSpot -->
+<script src="https://js.hsforms.net/forms/embed/45061181.js" defer></script>
+
+<!-- GSAP -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+
+        const menuTimeLine = gsap.timeline({paused: true, reversed: true});
+        gsap.set(".off-canvas-container", {yPercent: -10, autoAlpha: 0,});
+
+        menuTimeLine.to('.off-canvas-container', {
+            duration: .5,
+            yPercent: 0,
+            autoAlpha: 1,
+            ease: "expo.out",
+        });
+
+        let isSideBarOpen = false;
+
+        const bookingFormButton = document.getElementById("bookingFormButton");
+        bookingFormButton.addEventListener("click", () => {
+            if (isSideBarOpen) {
+                console.log("Open!!");
+                menuTimeLine.reverse();
+                document.body.classList.remove("no-scroll");
+                isSideBarOpen = !isSideBarOpen;
+            } else {
+                console.log("Close!!");
+                menuTimeLine.play();
+                document.body.classList.add("no-scroll");
+                isSideBarOpen = !isSideBarOpen;
+            }
+        });
+
+        const offCanvasCloseButton = document.getElementById("offCanvasCloseButton");
+        offCanvasCloseButton.addEventListener("click", () => {
+            if (isSideBarOpen) {
+                console.log("Open!!");
+                menuTimeLine.reverse();
+                document.body.classList.remove("no-scroll");
+                isSideBarOpen = false;
+            }
+        });
+
+
+        // [ TABS :: section ]
+        const tabButtons = document.querySelectorAll('[role="tab"]');
+        const tabPanels = document.querySelectorAll('.tab__panel');
+
+        let activePanel = document.getElementById('panelExperiences');
+
+        tabButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                gsap.fromTo(
+                    button,
+                    {scale: 1},
+                    {
+                        duration: 0.25,
+                        scale: 1.02,
+                        yoyo: true,
+                        repeat: 1,
+                        ease: 'power2.out',
+                    }
+                );
+
+                if (activePanel) {
+                    gsap.to(activePanel, {
+                        duration: 0.3,
+                        opacity: 0,
+                        onComplete: () => {
+                            activePanel.hidden = true;
+                            activePanel.style.opacity = '';
+
+                            tabButtons.forEach((btn) => {
+                                btn.setAttribute('aria-selected', 'false');
+                            });
+
+                            button.setAttribute('aria-selected', 'true');
+
+                            const panelId = button.getAttribute('aria-controls');
+                            const newPanel = document.getElementById(panelId);
+                            newPanel.hidden = false;
+
+                            gsap.fromTo(
+                                newPanel,
+                                {opacity: 0},
+                                {
+                                    duration: 0.3,
+                                    opacity: 1,
+                                }
+                            );
+
+                            activePanel = newPanel;
+                        },
+                    });
+                }
+            });
+        });
+
+
+    });
+</script>
+<!-- Custom Js -->
+
+
+<script>
+    // Función para aplicar padding en función del tamaño de la pantalla
+    function applyPadding() {
+        const content = document.getElementById("content");
+        if (window.innerWidth <= 900) {
+            // Móvil
+            content.style.paddingTop = "0";
+        } else {
+            // Desktop
+            content.style.paddingTop = "10rem";
+        }
+    }
+
+    window.addEventListener('scroll', function () {
+        document.getElementById("header").classList.add("white");
+        applyPadding();
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById("header").classList.add("white");
+        applyPadding();
+    });
+
+    // Opcional: escuchar también cambios de tamaño de ventana
+    window.addEventListener('resize', applyPadding);
+
+    const header = document.getElementById("header");
+    const observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+            if (!header.classList.contains("white")) {
+                header.classList.add("white");
+            }
+        });
+    });
+
+    observer.observe(header, {attributes: true, attributeFilter: ["class"]});
+</script>
+
+
+<script>
+    function checkViewport() {
+        const panel = document.getElementById('panelLuxuryResidences');
+        if (window.innerWidth >= 992) {
+            panel.removeAttribute('hidden');
+        } else {
+            panel.setAttribute('hidden', '');
+        }
+    }
+
+    window.addEventListener('resize', checkViewport);
+    window.addEventListener('DOMContentLoaded', checkViewport);
+</script>
+
+
+<script>
+    /*
+        Este script corresponde a la animación de Términos y Condiciones
+     */
+
+    let mm = gsap.matchMedia();
+
+    mm.add("(max-width: 899px)", () => {
+
+        const accordionHeading = document.getElementById("terms-heading");
+        const arrowDown = document.querySelector(".arrow-down");
+        const accordionList = document.getElementById("terms-list");
+
+        let isAccordionOpen = false;
+        gsap.set(".terms__list", {height: "auto"});
+
+        const accordionTimeLine = gsap.timeline({paused: true, reversed: true});
+
+        accordionTimeLine
+            .from(".terms__list", {
+                height: 0,
+                duration: 0.5
+            })
+            .to(
+                arrowDown,
+                {
+                    rotateX: 180,
+                    transformOrigin: "50% 50%",
+                    duration: 0.4,
+                    ease: "power1.inOut"
+                },
+                "<"
+            );
+
+        accordionHeading.addEventListener("click", () => {
+            if (isAccordionOpen) {
+                accordionTimeLine.reverse();
+                isAccordionOpen = false;
+            } else {
+                accordionTimeLine.play();
+                isAccordionOpen = true;
+            }
+        });
+
+        return () => {
+
+        };
+    });
+
+</script>
+
+
+<script>
+    // document.addEventListener('DOMContentLoaded', () => {
+    const selectButtons = document.querySelectorAll('.select-package-btn');
+    const packageSelect = document.getElementById('packageSelect');
+    console.log("SELECT Element:", packageSelect);
+
+    selectButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const packageName = button.getAttribute('data-package-name');
+            console.log("Paquete Seleccionado:", packageName);
+
+            packageSelect.value = packageName;
+
+            console.log("Nuevo valor del Select:", packageSelect.value);
+
+            if (packageSelect.value === packageName) {
+                console.log("El Select se ha actualizado correctamente.");
+            } else {
+                console.log("Error: El Select no se ha actualizado.");
+            }
+
+        });
+    });
+    // });
+</script>
+
+
+
+
+
+
+
+<!-- Formulario Desktop JS  -->
+<!-- - Packages [] -->
+<!-- - Personal Info ["First Name"] -->
+
+
+<script>
+    // Script para acciones del CALENDARIO del formulario (ARRIVAL DATE)
+    document.addEventListener("DOMContentLoaded", function() {
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        let mm = today.getMonth() + 1; // Los meses comienzan en 0, por eso sumamos 1.
+        let dd = today.getDate();
+
+        // Asegurarse de que el mes y el día tengan dos dígitos
+        if (mm < 10) mm = '0' + mm;
+        if (dd < 10) dd = '0' + dd;
+
+        const todayFormatted = `${yyyy}-${mm}-${dd}`;
+
+        // Establecer la fecha mínima para arrival-date, sin asignar un valor
+        const arrivalDateInput = document.getElementById("arrival-date");
+        arrivalDateInput.min = todayFormatted;
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const arrivalDateInput = document.getElementById("arrival-date");
+        const departureDateInput = document.getElementById("departure-date");
+
+        // Función para formatear una fecha en "YYYY-MM-DD"
+        function formatDate(date) {
+            const yyyy = date.getFullYear();
+            let mm = date.getMonth() + 1;
+            let dd = date.getDate();
+            if (mm < 10) mm = '0' + mm;
+            if (dd < 10) dd = '0' + dd;
+            return `${yyyy}-${mm}-${dd}`;
+        }
+
+        // Función para actualizar el atributo min de departure-date
+        function updateDepartureMin() {
+            if (arrivalDateInput.value !== "") {
+                // Habilitamos el input de departure-date
+                departureDateInput.disabled = false;
+
+                // Convertir el valor de arrival-date a objeto Date
+                const arrivalDate = new Date(arrivalDateInput.value);
+                // Sumar un día para que departure-date sea posterior a arrival-date
+                arrivalDate.setDate(arrivalDate.getDate() + 1);
+                const minDepartureDate = formatDate(arrivalDate);
+                departureDateInput.min = minDepartureDate;
+
+                // Si ya hay una fecha seleccionada en departure-date y es menor que el nuevo mínimo, se borra.
+                if (departureDateInput.value !== "" && departureDateInput.value < minDepartureDate) {
+                    departureDateInput.value = "";
+                }
+            } else {
+                // Si no hay valor en arrival-date, se deshabilita departure-date
+                departureDateInput.disabled = true;
+                departureDateInput.value = "";
+            }
+        }
+
+        // Escuchar cambios en arrival-date para actualizar departure-date
+        arrivalDateInput.addEventListener("change", updateDepartureMin);
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+<script>
+    // Script para acciones del Select del formulario
+    document.addEventListener("DOMContentLoaded", function() {
+        // Seleccionamos los <select> por su ID
+        const countrySelect = document.getElementById("country");
+        const stateSelect   = document.getElementById("state");
+
+        // Inicializamos nice-select2 en cada select
+        // Puedes pasar opciones, p. ej. { searchable: true }
+        const niceCountry = NiceSelect.bind(countrySelect, { searchable: true });
+        const niceState   = NiceSelect.bind(stateSelect, { searchable: true });
+
+        // Opcional: cuando cambie el país, se actualizan las opciones del select de Estado
+        // Para que nice-select2 refleje estos cambios, basta con llamar a .update()
+        countrySelect.addEventListener("change", function() {
+            niceState.update();
+        });
+    });
+</script>
+
+
+
+
+<script>
+    // Script para acciones del formulario
+    document.addEventListener("DOMContentLoaded", function() {
+        const navLeftGroup = document.getElementById("navLeft");
+        const navRightGroup = document.getElementById("navRight");
+        let currentFormStep = 0;
+
+
+        const form = document.getElementById("socialGroupsForm");
+        // const formStepsID = ["one", "two", "three", "four"];
+        const formStepsID = ["one", "two"];
+
+
+        const updateStepVisibility = () => {
+            formStepsID.forEach((step) => {
+                document.getElementById(step).style.display = "none";
+            });
+
+            document.getElementById(formStepsID[currentFormStep]).style.display = "block";
+
+            // stepInfo.textContent = `Step ${currentFormStep + 1} of ${formStepsID.length}`
+
+            if (currentFormStep === 3) {
+                // updateSummaryValues();
+            }
+
+            navLeftGroup.style.display = currentFormStep === 0 ? "none" : "block";
+
+            navRightGroup.style.display = currentFormStep === formStepsID.length - 1 ? "none" : "block";
+
+            const currentStep = document.getElementById(formStepsID[currentFormStep]);
+            const firstInput = currentStep.querySelector("input, select, textarea");
+            if (firstInput) {
+                firstInput.focus();
+            }
+        }
+
+        const validateStep = (currentStep) => {
+            let isValid = true;
+
+            // if (currentStep === 0) {
+            //     if (nameInput.value.trim() === "") {
+            //         showError(nameInput, "Name is required")
+            //         isValid = false
+            //     }
+            //     if (idNumInput.value.trim() === "") {
+            //         showError(idNumInput, "ID number is required")
+            //         isValid = false
+            //     }
+            //     if (emailInput.value.trim() === "" || !emailInput.validity.valid) {
+            //         showError(emailInput, "A valid email is required")
+            //         isValid = false
+            //     }
+            //     if (birthdateInput.value === "") {
+            //         showError(birthdateInput, "Date of birth is required")
+            //         isValid = false
+            //     }
+            // } else if (currentStep === 1) {
+            //     if (!documentInput.files[0]) {
+            //         showError(documentInput, "CV/Resume is required")
+            //         isValid = false
+            //     }
+            //     if (departmentInput.value === "") {
+            //         showError(departmentInput, "Department selection is required")
+            //         isValid = false
+            //     }
+            // } else if (currentStep === 2) {
+            //     if (!termsCheckbox.checked) {
+            //         showError(termsCheckbox, "Terms and conditions must be accepted")
+            //         isValid = false
+            //     }
+            // }
+
+            return isValid
+        }
+
+
+
+        navLeftGroup.style.display = "none";
+        // navLeftGroup.disabled = currentFormStep === 0;
+        updateStepVisibility();
+        // realtimeValidation();
+
+        // NEXT Button
+        navRightGroup.addEventListener("click", () => {
+            if (currentFormStep < formStepsID.length - 1) {
+                if (validateStep(currentFormStep)) {
+                    currentFormStep++;
+                    updateStepVisibility();
+                }
+            }
+        })
+
+
+        // PREV Button
+        navLeftGroup.addEventListener("click", () => {
+            if (currentFormStep > 0) {
+                currentFormStep--;
+                updateStepVisibility();
+            }
+        })
+
+
+
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>
