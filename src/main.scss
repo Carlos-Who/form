@@ -265,7 +265,7 @@ hr.form-separator {
 
   .sticky-content {
     position: sticky;
-    top: 4rem;
+    top: 3.3rem;
     left: 0;
     display: flex;
     width: 100%;
@@ -577,6 +577,25 @@ hr.form-separator {
     padding: 0 !important;
   }
 
+  .inclusions__section {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100px;
+      background: #FBFBFB;
+      clip-path: polygon(100% 0%, 0% 0% , 0.00% 50.54%, 2.00% 50.50%, 4.00% 50.37%, 6.00% 50.17%, 8.00% 49.88%, 10.00% 49.51%, 12.00% 49.07%, 14.00% 48.55%, 16.00% 47.97%, 18.00% 47.32%, 20.00% 46.61%, 22.00% 45.85%, 24.00% 45.05%, 26.00% 44.20%, 28.00% 43.32%, 30.00% 42.40%, 32.00% 41.47%, 34.00% 40.53%, 36.00% 39.58%, 38.00% 38.62%, 40.00% 37.68%, 42.00% 36.76%, 44.00% 35.85%, 46.00% 34.98%, 48.00% 34.14%, 50.00% 33.35%, 52.00% 32.60%, 54.00% 31.91%, 56.00% 31.28%, 58.00% 30.72%, 60.00% 30.22%, 62.00% 29.80%, 64.00% 29.45%, 66.00% 29.19%, 68.00% 29.00%, 70.00% 28.90%, 72.00% 28.88%, 74.00% 28.95%, 76.00% 29.10%, 78.00% 29.33%, 80.00% 29.64%, 82.00% 30.03%, 84.00% 30.49%, 86.00% 31.03%, 88.00% 31.63%, 90.00% 32.30%, 92.00% 33.02%, 94.00% 33.79%, 96.00% 34.61%, 98.00% 35.47%, 100.00% 36.36%);
+
+    }
+  }
+
   .inclusions__tabs {
     width: 100%;
   }
@@ -682,6 +701,15 @@ hr.form-separator {
 
 
 
+  @media (min-width: 900px) {
+    .inclusions__section {
+      &::after {
+        z-index: 2;
+      }
+    }
+  }
+
+
 
 
   // [ aside-container ]
@@ -694,7 +722,6 @@ hr.form-separator {
     padding: 1em;
     background-color: white;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    border: 1px solid blueviolet;
   }
 
 
@@ -926,13 +953,20 @@ hr.form-separator {
                SOCIAL GROUPS FORM :: << external file >>
   / ---------------------------------------------------------- */
   .sticky-form__container {
+
     width: 100%;
     max-width: 100%;
-    height: 100%;
+    height: calc(90vh - 3.3rem);
+    overflow-y: auto;
+
     border: 1px solid transparent;
+    padding: .5em;
+    padding-bottom: 0;
+
   }
 
   .social-groups__form {
+    overflow: auto;
     padding: .5em !important;
     background-color: transparent;
   }
@@ -1279,15 +1313,16 @@ hr.form-separator {
       padding: 0;
       padding-bottom: 4em;
       height: 100%;
+      max-height: 10rem;
     }
 
-    .sticky-form__container {
-      overflow: auto;
+    //.sticky-form__container {
+    //  overflow: auto;
       //height: 80vh;
       //max-height: 48rem;
       //border: 1px solid transparent;
       //border: 1px solid crimson;
-    }
+    //}
 
     // >> GRID-TAB's
     .inclusions__tabs {
